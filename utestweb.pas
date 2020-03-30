@@ -17,8 +17,10 @@ type
     FInterval: NativeInt;
     FBodyTag: TJSHTMLElement;
     FTimerTag: TJSHTMLElement;
+    FXHR: TJSXMLHttpRequest;
     procedure DoTimerTick;
     procedure EnableTick;
+    function onLoad(Event: TEventListenerEvent): boolean;
   public
     constructor Create(aOwner: TComponent); override;
     procedure Start;
@@ -33,11 +35,21 @@ implementation
 procedure TTestWeb.DoTimerTick;
 begin
   FTimerTag.innerHTML := TimeToStr(time);
+
+{  Fxhr := TJSXMLHttpRequest.New;
+  Fxhr.addEventListener('load', @OnLoad);
+  Fxhr.Open('GET', 'countries.json', True);
+  Fxhr.send;}
 end;
 
 procedure TTestWeb.EnableTick;
 begin
   FInterval := window.setInterval(@DoTimerTick, FInterval);
+end;
+
+function TTestWeb.onLoad(Event: TEventListenerEvent): boolean;
+begin
+  //Writeln(FXHR.Status);
 end;
 
 constructor TTestWeb.Create(aOwner: TComponent);
