@@ -36,10 +36,10 @@ procedure TTestWeb.DoTimerTick;
 begin
   FTimerTag.innerHTML := TimeToStr(time);
 
-{  Fxhr := TJSXMLHttpRequest.New;
+  Fxhr := TJSXMLHttpRequest.New;
   Fxhr.addEventListener('load', @OnLoad);
   Fxhr.Open('GET', 'countries.json', True);
-  Fxhr.send;}
+  Fxhr.send;
 end;
 
 procedure TTestWeb.EnableTick;
@@ -49,7 +49,7 @@ end;
 
 function TTestWeb.onLoad(Event: TEventListenerEvent): boolean;
 begin
-  //Writeln(FXHR.Status);
+  Writeln(FXHR.Status);
 end;
 
 constructor TTestWeb.Create(aOwner: TComponent);

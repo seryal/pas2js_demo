@@ -40,14 +40,11 @@
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="project1.html"/>
+        <Filename Value="utestweb.pas"/>
         <IsPartOfProject Value="True"/>
-        <CustomData Count="1">
-          <Item0 Name="PasJSIsProjectHTMLFile" Value="1"/>
-        </CustomData>
       </Unit1>
       <Unit2>
-        <Filename Value="utestweb.pas"/>
+        <Filename Value="pas2js_demo.html"/>
         <IsPartOfProject Value="True"/>
       </Unit2>
     </Units>
